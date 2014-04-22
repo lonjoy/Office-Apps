@@ -1,4 +1,4 @@
 Office-Apps
 ===========
 
-Office Apps by Microsoft Open Technologies, Inc.
+This is a placeholder repository. Please refer to https://github.com/OfficeDev/Office-Apps for the actual repo.
