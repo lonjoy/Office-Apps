@@ -1,0 +1,96 @@
+﻿/**************************************************
+* Copyright (c) Microsoft Open Technologies (Shanghai) Company Limited.  All rights reserved.
+* 
+* The MIT License (MIT)
+* 
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+* 
+* The above copyright notice and this permission notice shall be included in
+* all copies or substantial portions of the Software.
+* 
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+* THE SOFTWARE.
+**************************************************/
+
+/* Common app styling */
+
+html, body, div, span, p, iframe, h1, h2, h3, h4, h5, h6, a, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 16px;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    line-height: 1;
+    background: #fff;
+}
+
+#notification-message {
+    background-color: #f4f4f4;
+    color: #a80f22;
+    position: fixed;
+    min-height: 50px;
+    padding: 15px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000; /* Keep on top */
+    display: none; /* Hidden until invoked */
+}
+
+#notification-message-header {
+    height: 24px;
+    margin-bottom: 10px;
+}
+
+#notification-message-title {
+    float: left;
+    font-size: 110%;
+    height: 24px;
+    line-height: 24px;
+}
+
+#notification-message-close {
+    float: right;
+}
+
+    #notification-message-close a {
+        width: 24px;
+        height: 24px;
+    }
+
+        #notification-message-close a img {
+            vertical-align: middle;
+        }
+
+.progress {
+    display: inline-block;
+    position: relative;
+    width: 23px;
+    height: 23px;
+}
+
+    .progress .spin {
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background: #808080;
+    }
+
+        .progress .spin.indicate {
+            background: transparent;
+        }

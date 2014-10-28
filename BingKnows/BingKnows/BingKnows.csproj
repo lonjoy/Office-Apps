@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (c) Microsoft Open Technologies (Shanghai) Company Limited.  All rights reserved.
+ 
+The MIT License (MIT)
+ 
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+ 
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+ 
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+-->
+
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{734C8E26-B25F-440D-B7FB-BE65098DD435}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BingKnows</RootNamespace>
+    <AssemblyName>BingKnows</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <IncludeAssemblyInPackage>False</IncludeAssemblyInPackage>
+    <AppFeaturePartId>{a739b399-336b-465d-8142-018c840707f0}</AppFeaturePartId>
+    <WspPartId>{07252746-8d89-4fd8-93fc-6f939836699b}</WspPartId>
+    <WorkflowPartId>{0980f954-90fe-40fc-8ecd-e82557f2125a}</WorkflowPartId>
+    <CspkgPartId>{ccb95abf-47d5-463e-aa95-d67d02cb73a2}</CspkgPartId>
+    <SqlPackagePartId>{be0dc93c-d563-47d6-9b8f-7bb48c0fc754}</SqlPackagePartId>
+    <ProjectMode>OfficeApp</ProjectMode>
+    <MinimumOfficeToolsVersion>12.1</MinimumOfficeToolsVersion>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="BingKnowsManifest\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{18d0d476-045a-4f13-b73a-21fc4fa508b0}</SharePointProjectItemId>
+    </None>
+    <Content Include="BingKnowsManifest\BingKnows.xml">
+      <OpcRelationship>manifest-oemanifest</OpcRelationship>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BingKnowsWeb\BingKnowsWeb.csproj">
+      <Project>{D27FBBA1-2A2B-4924-9015-9FC4C4C35D59}</Project>
+      <Name>BingKnowsWeb</Name>
+      <Private>True</Private>
+      <RoleType>Web</RoleType>
+      <OutputItemType>SharePointWebProjectOutput</OutputItemType>
+      <RoleName>BingKnowsWeb</RoleName>
+      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

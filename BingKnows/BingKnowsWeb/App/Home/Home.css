@@ -1,0 +1,197 @@
+﻿/**************************************************
+* Copyright (c) Microsoft Open Technologies (Shanghai) Company Limited.  All rights reserved.
+* 
+* The MIT License (MIT)
+* 
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+* 
+* The above copyright notice and this permission notice shall be included in
+* all copies or substantial portions of the Software.
+* 
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+* THE SOFTWARE.
+**************************************************/
+
+/* Page-specific styling */
+
+.content-header {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    top: 0;
+    z-index: 1000;
+    background: #ddd;
+}
+
+    .content-header > .search-box-container {
+        margin: 10px 5px;
+    }
+
+        .content-header > .search-box-container > img {
+            position: absolute;
+            z-index: 100; /* ensure display */
+        }
+
+        .content-header > .search-box-container > .search-box {
+            position: relative;
+            height: 35px; /* same as container image */
+            background: #fff;
+        }
+
+            .content-header > .search-box-container > .search-box > div {
+                padding: 0 39px 0 45px;
+                height: 35px; /* same as search box */
+            }
+
+#search-text {
+    width: 100%;
+    height: 30px;
+    margin: 3px 0 0 0;
+    border: 0;
+    font-size: 20px;
+}
+
+#search-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 39px;
+    height: 35px;
+    border: 0;
+    background: url("../../Images/Search.png") no-repeat transparent;
+    background-position: center center;
+    background-size: 20px 20px;
+}
+
+#content-main {
+    margin: 60px 0 0 0; /* same as header */
+}
+
+#default-message {
+    text-align: center;
+    padding: 30px 5px;
+    color: #808080;
+}
+
+#empty-message {
+    margin: 70px 0 10px 0; /* top = header + 10px, bottom = 10px */
+    padding: 10px 5px;
+    text-align: center;
+    color: #808080;
+    background: #ddd;
+}
+
+#waiting-area {
+    margin: 90px 5px 10px 5px; /* top = header + 30px, bottom = 10px */
+    text-align: center;
+}
+
+    #waiting-area .title {
+        text-align: center;
+        color: #808080;
+    }
+
+#search-result {
+    padding: 5px;
+    color: #333;
+    background: #ddd;
+}
+
+#search-result-main {
+    padding: 5px;
+    background: #fff;
+    overflow: hidden;
+}
+
+#search-result-title {
+    margin: 0 0 5px 0;
+}
+
+    #search-result-title h2 {
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.2;
+    }
+
+    #search-result-title span {
+        display: block;
+        color: #808080;
+        line-height: 1.2;
+    }
+
+#search-result-image {
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+#search-result-caption {
+    line-height: 1.5;
+}
+
+#search-result-attributes, #search-result-related, #search-result-categories {
+    margin: 10px 0 0 0;
+}
+
+    #search-result-attributes > h2, #search-result-related > h2, #search-result-categories > h2 {
+        font-size: 20px;
+        color: #808080;
+        margin: 0 0 5px 0;
+    }
+
+    #search-result-attributes > div, #search-result-related > div, #search-result-categories > div {
+        background: #fff;
+        padding: 5px;
+    }
+
+    #search-result-attributes .search-attr {
+        display: table;
+        margin: 0 0 10px 0;
+    }
+
+        #search-result-attributes .search-attr .search-attr-key {
+            display: table-cell;
+            width: 90px;
+            color: #808080;
+            font-weight: bolder;
+            line-height: 1.2;
+        }
+
+        #search-result-attributes .search-attr .search-attr-value {
+            display: table-cell;
+            padding: 0 0 0 5px;
+            line-height: 1.2;
+        }
+
+    #search-result-related > div > div {
+        clear: both;
+        margin: 0 0 10px 0;
+    }
+
+    #search-result-related img {
+        float: left;
+        margin: 0 10px 0 0;
+    }
+
+    #search-result-related p {
+        line-height: 1.5;
+    }
+
+    #search-result-categories span {
+        line-height: 1.2;
+        text-align: center;
+        word-break: break-all;
+        padding: 0 10px;
+        margin: 0 5px 5px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+    }

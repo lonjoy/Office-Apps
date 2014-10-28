@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) Microsoft Open Technologies (Shanghai) Company Limited.  All rights reserved.
+ 
+The MIT License (MIT)
+ 
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+ 
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+ 
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+-->
+
+<!--Created:cb85b80c-f585-40ff-8bfc-12ff4d0e34a9-->
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TaskPaneApp">
+  <Id>1b72c76b-37f1-4c10-b1b8-6974bfb36c27</Id>
+  <Version>1.0</Version>
+  <ProviderName>Microsoft Open Technologies (China)</ProviderName>
+  <DefaultLocale>zh-CN</DefaultLocale>
+  <DisplayName DefaultValue="必应网典">
+    <Override Locale="zh-CHS" Value="必应网典" />
+    <Override Locale="zh-Hans" Value="必应网典" />
+  </DisplayName>
+  <Description DefaultValue="提纯互联网智慧，知识一触可得">
+    <Override Locale="zh-CHS" Value="提纯互联网智慧，知识一触可得" />
+    <Override Locale="zh-Hans" Value="提纯互联网智慧，知识一触可得" />
+  </Description>
+  <IconUrl DefaultValue="~remoteAppUrl/Images/logo_32x32.png" />
+  <SupportUrl DefaultValue="~remoteAppUrl/support.html" />
+  <AppDomains>
+    <AppDomain>https://ajax.aspnetcdn.com</AppDomain>
+    <AppDomain>https://www.bing.com</AppDomain>
+  </AppDomains>
+  <!--The HighResolutionIcon element is commented because it is valid only for 1.1 (or above) versions of the manifest.
+      To use this property, convert this manifest to version 1.1 by adding an API set in the Activation tab of the manifest editor.-->
+  <!--<HighResolutionIconUrl DefaultValue="~remoteAppUrl/Images/logo_64x64.png" />-->
+  <Capabilities>
+    <Capability Name="Document" />
+    <Capability Name="Workbook" />
+  </Capabilities>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="~remoteAppUrl/App/Home/Home.html" />
+  </DefaultSettings>
+  <Permissions>ReadDocument</Permissions>
+</OfficeApp>
