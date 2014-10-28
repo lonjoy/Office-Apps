@@ -1,4 +1,5 @@
-Office-Apps
-===========
+# Apps for Office
+This repository contains the following open source projects:
+ - [Bing Knows](https://github.com/MSOpenTech/Office-Apps/tree/master/BingKnows)
 
-This is a placeholder repository. Please refer to https://github.com/OfficeDev/Office-Apps for the actual repo.
+For more apps for Office open source projects, please visit https://github.com/OfficeDev/Office-Apps.
