@@ -81,14 +81,7 @@ namespace Microsoft.OpenTech
         {
             var uri = WebConfigurationManager.AppSettings["BingKnowsWikiApiAddress"];
             var param = HttpUtility.UrlEncode(search);
-            if (uri.EndsWith("/", StringComparison.OrdinalIgnoreCase))
-            {
-                uri = uri + param;
-            }
-            else
-            {
-                uri = string.Concat(uri, "/", param);
-            }
+            uri = uri + param;
 
             using (var client = new HttpClient())
             {
